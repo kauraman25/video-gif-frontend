@@ -4,7 +4,7 @@ const App = () => {
   const [activeTab, setActiveTab] = useState("youtube");
   const [ytPrompt, setYtPrompt] = useState("");
   const [ytUrl, setYtUrl] = useState("");
-  const [isDirectMp4, setIsDirectMp4] = useState(false);
+  const [isDirectMp4] = useState(false);
   const [uploadPrompt, setUploadPrompt] = useState("");
   const [videoFile, setVideoFile] = useState(null);
   const [loading, setLoading] = useState(false);
