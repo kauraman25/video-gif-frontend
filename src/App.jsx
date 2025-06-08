@@ -23,6 +23,7 @@ const App = () => {
     setGifs(gifList);
     setJobId(id);
   };
+  //http://127.0.0.1:8000
   const API_BASE = "https://video-gif-backend.onrender.com";
   const handleYoutubeSubmit = async (e) => {
     e.preventDefault();
@@ -121,6 +122,14 @@ const App = () => {
               required
             />
           </div>
+          <div >
+            <input
+              type="checkbox"
+              checked={isDirectMp4}
+              onChange={(e) => setIsDirectMp4(e.target.checked)}
+            />
+            <label>This is a direct MP4 link</label>
+          </div>
           
           <button className="button-submit" type="submit">Generate GIFs</button>
         </form>
@@ -159,6 +168,7 @@ const App = () => {
 
       {loading && (
         <div className="loader">
+
         </div>
       )}
 
