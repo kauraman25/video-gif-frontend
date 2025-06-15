@@ -24,7 +24,7 @@ const App = () => {
     setJobId(id);
   };
   //http://127.0.0.1:8000
-  const API_BASE = "https://video-gif-backend.onrender.com";
+  const API_BASE = "http://127.0.0.1:8000";
   const handleYoutubeSubmit = async (e) => {
     e.preventDefault();
     if (!ytUrl || !ytPrompt) return showError("Please fill in all fields.");
@@ -34,7 +34,7 @@ const App = () => {
     setGifs([]);
 
     try {
-      const response = await fetch(`${API_BASE}/process-youtube`, {
+      const response = await fetch(`${API_BASE}/youtube`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
@@ -70,7 +70,7 @@ const App = () => {
     formData.append("prompt", uploadPrompt);
 
     try {
-      const response = await fetch(`${API_BASE}/process-upload`, {
+      const response = await fetch(`${API_BASE}/upload`, {
         method: "POST",
         body: formData,
       });
