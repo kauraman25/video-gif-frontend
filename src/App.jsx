@@ -24,7 +24,7 @@ const App = () => {
     setJobId(id);
   };
   //http://127.0.0.1:8000
-  const API_BASE = "http://127.0.0.1:8000";
+  const API_BASE = "https://video-gif-backend.onrender.com";
   const handleYoutubeSubmit = async (e) => {
     e.preventDefault();
     if (!ytUrl || !ytPrompt) return showError("Please fill in all fields.");
